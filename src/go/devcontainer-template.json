@@ -1,0 +1,26 @@
+{
+  "id": "Go",
+  "version": "1.0.0",
+  "name": "Go Dev",
+  "description": "Generic Go Dev template for starting projects",
+  "options": {
+    "baseImage": {
+      "type": "string",
+      "description": "Base container image to start with",
+      "proposals": [
+        "debian:stable",
+        "ubuntu:stable"
+      ],
+      "default": "debian:stable"
+    },
+    "goVersion": {
+      "type": "string",
+      "description": "Go version to install",
+      "proposals": [
+        "latest",
+        "1.19.4"
+      ],
+      "default": "latest"
+    }
+  }
+}

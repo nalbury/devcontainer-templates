@@ -1,0 +1,36 @@
+{
+	"name": "Generic Go Dev",
+	"image": "${templateOption:baseImage}",
+	"workspaceFolder": "/src/",
+	"remoteUser": "code",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true,
+			"username": "code"
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {
+      "jqVersion": "latest",
+      "yqVersion": "latest",
+      "gojqVersion": "latest"
+    },
+		"ghcr.io/devcontainers/features/go:1": {
+      "version": "${templateOption:goVersion}"
+    },
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go",
+				"ms-azuretools.vscode-docker",
+				"Gruntfuggly.todo-tree"
+			],
+			"settings": {
+				"go.toolsManagement.autoUpdate": true,
+				"go.useLanguageServer": true,
+				"go.gopath": "/go"
+			}
+		}
+	}
+}
